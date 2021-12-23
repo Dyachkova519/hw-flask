@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %} Анкета {% endblock %}
+
+{% block content %}
+<body>
+	<h2>Очень важный опрос</h2>
+	<form class="container" action="/process">
+		<h4>Немного о вас</h4>
+		<div class="row">
+			<div class="col-md-4">Возраст</div>
+			<div class="col-md-4"><input type="number" name="age"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">Гендер</div>
+			<select name="gender" class="col-md-4">
+				<option value="male">м</option>
+				<option value="female">ж</option>
+				<option value="other">другой</option>
+			</select>
+		</div>
+		<div class="row">
+			<div class="col-md-4">Уровень образования</div>
+			<select name="education" class="col-md-4">
+				<option value="kindergarten">детский сад</option>
+				<option value="school_9">9 классов школы</option>
+				<option value="school_11">11 классов школы</option>
+				<option value="college">среднее специальное</option>
+				<option value="student">неоконченное высшее</option>
+				<option value="bachelor">бакалавриат/специалитет</option>
+				<option value="master">магистратура</option>
+				<option value="phd">аспирантура</option>
+				<option value="candidate">кандидат наук</option>
+				<option value="doctor">доктор наук</option>
+			</select>
+		</div>
+		<br>
+		<h4>Анкета</h4>
+		<br>
+		<h6>Какие из этих анекдотов вы слышали?</h6>
+		<div class="form-check">
+			<label class="form-check-label">
+			  <input class="form-check-input" type="checkbox" name="q1" value="Вовочка">
+			  Про Вовочку<br>
+			  <input class="form-check-input" type="checkbox" name="q1" value="Штирлиц">
+			  Про Штирлица<br>
+			  <input class="form-check-input" type="checkbox" name="q1" value="Чапаев">
+			  Про Чапая<br>
+			  <input class="form-check-input" type="checkbox" name="q1" value="Сталин">
+			  Про Сталина<br>
+			  <input class="form-check-input" type="checkbox" name="q1" value="Евреи">
+			  Про евреев<br>
+			  <input class="form-check-input" type="checkbox" name="q1" value="Ржевский">
+			  Про Ржевского<br>
+			</label>
+		</div>
+		<br>
+		<h6>Какие из этих анекдотов кажутся вам смешными?</h6>
+		<div class="form-check">
+			<label class="form-check-label">
+			  <input class="form-check-input" type="checkbox" name="q2" value="Вовочка">
+			  Про Вовочку<br>
+			  <input class="form-check-input" type="checkbox" name="q2" value="Штирлиц">
+			  Про Штирлица<br>
+			  <input class="form-check-input" type="checkbox" name="q2" value="Чапаев">
+			  Про Чапая<br>
+			  <input class="form-check-input" type="checkbox" name="q2" value="Сталин">
+			  Про Сталина<br>
+			  <input class="form-check-input" type="checkbox" name="q2" value="Евреи">
+			  Про евреев<br>
+			  <input class="form-check-input" type="checkbox" name="q2" value="Ржевский">
+			  Про Ржевского<br>
+			</label>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-4">Какой ваш любимый анекдот</div>
+			<div class="col-md-4"><input type="text" name="q3"></div>
+		</div>
+		<br>
+		<div class="row">
+			<input class="btn btn-primary" type="submit" value="Отправить">
+		</div>
+	</form>
+ </body>
+{% endblock %}

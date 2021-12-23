@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Исследование {% endblock %}
+
+{% block content %}
+<body>
+ 
+    <h4>Вот сколько людей знают эти анекдоты:</h4>
+    <br>
+        <p>
+            {% for type, number in sort_freq_di.items() %}
+                <li>{{ type }} - {{ number }}</li>
+            {% endfor %}
+        </p>
+    <h4>А вот информация о возрасте тех людей, которые поучаствовали в исследовании</h4>
+    <table>
+        <tr>
+            <td>Средний возраст</td>
+            <td>{{ all_info['age_mean'] }}</td>
+        </tr>
+        <tr>
+            <td>Минимальный возраст</td>
+            <td>{{ all_info['age_min'] }}</td>
+        </tr>
+        <tr>
+            <td>Максимальный возраст</td>
+            <td>{{ all_info['age_max'] }}</td>
+        </tr>
+    </table>
+</body>
+{% endblock %}
